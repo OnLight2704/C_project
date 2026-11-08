@@ -252,3 +252,86 @@
 //         cout<<"x="<<x<<"ne sush.";
 //     } 
 // }
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n, d= 2;
+//     cin >> n;
+
+//     int count = 0;       
+//     int sobDel = 0;      
+
+//     while (d <= n / 2) {
+//         if (n % d == 0) {
+//             count++;
+//             sobDel = d;
+//         }
+//         d++;
+//     }
+
+//     if (count == 0) {
+//         cout << "Chislo " << n << " prostoe" << endl;
+//     } else {
+//         cout << "Naibolshiy sobstvenniy delitel: " << sobDel << endl;
+//         cout << "Kolichestvo sobstvenix deliteley: " << count << endl;
+//     }
+//     return 0;
+// }
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main(){
+
+    const int n = 10;
+    int a[n];
+
+    srand((unsigned)time(0));
+
+    // Заполнение и вывод массива
+    cout << "Массив: ";
+    for (int i = 0; i < n; i++)
+    {
+        a[i] = rand() % 21 - 10;   // [-10; 10]
+        cout << a[i] << "\t";
+    }
+
+    // Поиск элементов, встречающихся ровно один раз
+    int sum = 0;
+    int count = 0;
+
+    cout << "\nЭлементы, встречающиеся один раз: ";
+    for (int i = 0; i < n; i++)
+    {
+        int times = 0;
+        for (int j = 0; j < n; j++)
+        {
+            if (a[j] == a[i])
+            {
+                times++;
+            }
+        }
+
+        if (times == 1)
+        {
+            cout << a[i] << " ";
+            sum += a[i];
+            count++;
+        }
+    }
+
+    if (count == 0)
+    {
+        cout << "таких элементов нет";
+    }
+    else
+    {
+        cout << "\nСумма: " << sum;
+    }
+
+    cout << endl;
+    return 0;
+}
