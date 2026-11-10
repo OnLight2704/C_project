@@ -279,59 +279,161 @@
 //     return 0;
 // }
 
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-using namespace std;
+// #include <iostream>
+// #include <cstdlib>
+// #include <ctime>
+// using namespace std;
 
-int main(){
+// int main(){
 
-    const int n = 10;
-    int a[n];
+//     const int n = 10;
+//     int a[n];
 
-    srand((unsigned)time(0));
+//     srand((unsigned)time(0));
 
-    // Заполнение и вывод массива
-    cout << "Массив: ";
-    for (int i = 0; i < n; i++)
-    {
-        a[i] = rand() % 21 - 10;   // [-10; 10]
-        cout << a[i] << "\t";
-    }
+//     // Zapolnenie i vyvod massiva
+//     cout << "Massiv: ";
+//     for (int i = 0; i < n; i++)
+//     {
+//         a[i] = rand() % 21 - 10;   // [-10; 10]
+//         cout << a[i] << "\t";
+//     }
 
-    // Поиск элементов, встречающихся ровно один раз
-    int sum = 0;
-    int count = 0;
+//     // Poisk elementov, vstrechayushchihsya rovno odin raz
+//     int sum = 0;
+//     int count = 0;
 
-    cout << "\nЭлементы, встречающиеся один раз: ";
-    for (int i = 0; i < n; i++)
-    {
-        int times = 0;
-        for (int j = 0; j < n; j++)
-        {
-            if (a[j] == a[i])
-            {
-                times++;
-            }
-        }
+//     cout << "\nElementy, vstrechayushchiesya odin raz: ";
+//     for (int i = 0; i < n; i++)
+//     {
+//         int times = 0;
+//         for (int j = 0; j < n; j++)
+//         {
+//             if (a[j] == a[i])
+//             {
+//                 times++;
+//             }
+//         }
 
-        if (times == 1)
-        {
-            cout << a[i] << " ";
-            sum += a[i];
-            count++;
-        }
-    }
+//         if (times == 1)
+//         {
+//             cout << a[i] << " ";
+//             sum += a[i];
+//             count++;
+//         }
+//     }
 
-    if (count == 0)
-    {
-        cout << "таких элементов нет";
-    }
-    else
-    {
-        cout << "\nСумма: " << sum;
-    }
+//     if (count == 0)
+//     {
+//         cout << "takih elementov net";
+//     }
+//     else
+//     {
+//         cout << "\nSumma: " << sum;
+//     }
 
-    cout << endl;
-    return 0;
-}
+//     cout << endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <cstdlib>
+// #include <ctime>
+// using namespace std;
+
+// int main(){
+//     const int n = 4, m = 5;
+//     int a[n][m];
+//     int b[n * m];
+//     int k = 0, sum = 0;
+
+//     srand((unsigned)time(0));
+
+//     // Zapolnenie i vyvod matricy
+//     cout << "Ishodnaya matrica:\n";
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < m; j++)
+//         {
+//             a[i][j] = rand() % 21 - 10;
+//             cout << a[i][j] << "\t";
+//         }
+//         cout << endl;
+//     }
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < m; j++)
+//         {
+//             int count = 0;
+//             for (int x = 0; x < n; x++)
+//             {
+//                 for (int y = 0; y < m; y++)
+//                 {
+//                     if (a[i][j] == a[x][y])
+//                         count++;
+//                 }
+//             }
+
+//             if (count == 1)
+//             {
+//                 b[k] = a[i][j];
+//                 sum += b[k];
+//                 k++;
+//             }
+//         }
+//     }
+//     if (k == 0)
+//     {
+//         cout << "\nTakih elementov net" << endl;
+//     }
+//     else
+//     {
+//         cout << "\nElementy, vstrechayushchiesya odin raz:\n";
+//         for (int i = 0; i < k; i++)
+//             cout << b[i] << " ";
+//         cout << "\nSumma elementov: " << sum << endl;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <cstdlib>
+// #include <ctime>
+// using namespace std;
+
+// int main()
+// {
+//     const int n = 5, m = 4;   
+//     int a[n][m];
+//     int s[m];            
+
+//     srand((unsigned)time(0));
+
+//     // Zapolnenie i vyvod matricy
+//     cout << "Isxodnaya matritca:\n";
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < m; j++)
+//         {
+//             a[i][j] = rand() % 41 - 10;
+//             cout << a[i][j] << "\t";
+//         }
+//         cout << endl;
+//     }
+//     for (int j = 0; j < m; j++)
+//     {
+//         s[j] = 0;
+//         for (int i = 0; i < n; i++)
+//         {
+//             s[j] += a[i][j];
+//         }
+//     }
+//     cout << "\nSuma stolbikov:\n";
+//     for (int j = 0; j < m; j++)
+//     {
+//         cout << s[j] << "\t";
+//     }
+//     cout <<endl;
+
+//     return 0;
+// }
